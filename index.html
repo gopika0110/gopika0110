@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html style="height: 100%" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <style>
+      body {
+        margin: auto;
+        overflow-x: hidden;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .navbar {
+        background-color: rgb(170, 203, 231);
+        height: 75px;
+      }
+      .navcontent {
+        float: right;
+        display: flex;
+        flex-direction: row;
+        margin: 10px;
+      }
+      .navbar li {
+        list-style: none;
+        padding-left: 50px;
+        padding-top: 20px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bolder;
+        font-size: large;
+      }
+      li:hover {
+        cursor: pointer;
+        color: rgb(90, 151, 226);
+      }
+
+      .logo {
+        display: inline-block;
+        padding-top: 20px;
+        padding-left: 50px;
+      }
+      .container {
+        height: 650px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        font-size: 25px;
+        color: black;
+        padding-top: 50px;
+        padding-left: 100px;
+        background-image: url(assets/bluebg.png);
+        background-size: cover;
+      }
+      .avatar {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      .btn {
+        padding: 15px;
+        border: solid black;
+        border-radius: 5px;
+        font-size: large;
+        background-color: rgb(122, 188, 239);
+        font-weight: bold;
+        margin-top: 18px;
+      }
+      .btn:hover {
+        background-color: rgb(194, 216, 243);
+      }
+      .Aboutme {
+        height: 500px;
+        background-color: rgb(228, 123, 121);
+        margin-top: -20px;
+      }
+      .container2 {
+        height: 700px;
+        /* background-image: url(assets/bluebg.png); */
+        /* background-size: cover; */
+        background-color: azure;
+        margin-top: -25px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+      .word {
+        width: 700px;
+      }
+      .content {
+        font-size: 25px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        padding-left: 100px;
+        padding-top: 90px;
+      }
+      .btn2 {
+        padding: 15px;
+        border: solid black;
+        border-radius: 5px;
+        font-size: large;
+        background-color: rgb(122, 188, 239);
+        font-weight: bold;
+        margin-top: 18px;
+      }
+      .btn2:hover {
+        background-color: rgb(194, 216, 243);
+      }
+      .services {
+        height: 300px;
+        margin-top: -20px;
+        background-color: rgb(170, 203, 231);
+        text-align: center;
+        padding-top: 100px;
+        font-size: 22px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .maincontainer {
+        height: 700px;
+      }
+      .container3 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-top: 70px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .container4 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-top: 70px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .paragraph {
+        width: 318px;
+      }
+
+      .heading {
+        font-size: 25px;
+      }
+      .heading:hover {
+        cursor: pointer;
+        color: rgb(90, 151, 226);
+      }
+      .container5 {
+        height: 180px;
+        background: -webkit-linear-gradient(#5a97e2 10%, #aacbe7 90%);
+        padding: 100px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .rows {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        color: white;
+      }
+      .number {
+        text-align: center;
+        font-size: 40px;
+      }
+      .container6 {
+        margin-top: -22px;
+        height: 230px;
+        padding-top: 100px;
+      }
+      .latestProjects {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 22px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+      }
+      .menu {
+        height: 50px;
+        text-align: center;
+        padding-top: 10px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .filters {
+        list-style: none;
+      }
+      .filterlist {
+        display: inline-block;
+        margin-right: 40px;
+      }
+      .grid {
+        display: flex;
+        justify-content: center;
+        padding-top: 40px;
+      }
+      .gridimage {
+        width: 450px;
+        padding: 20px;
+        border-radius: 35px;
+      }
+      .desc {
+        text-align: center;
+      }
+      .descp {
+        text-align: center;
+      }
+      .grid2 {
+        display: flex;
+        justify-content: center;
+        padding-top: 40px;
+      }
+      /* .feedback {
+        height: 300px;
+        background-color: #aacbe7;
+      } */
+
+      .plans {
+        display: flex;
+        justify-content: center;
+      }
+      .packagelist ul {
+        list-style: none;
+        padding: 0;
+      }
+      .packagelist li {
+        font-size: 1.25rem;
+      }
+      .packagelist ul li {
+        padding: 10px 10px;
+        border-top: 0.5px solid white;
+      }
+      .packageno {
+        display: grid;
+        font-weight: 300px;
+        font-size: 35px;
+        background-color: rgba(132, 144, 255, 0.1);
+        width: 140px;
+        height: 140px;
+        border: 30px solid rgba(132, 144, 255, 0.1);
+        border-radius: 100px;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .box {
+        width: 350px;
+        background-color: #f9f9ff;
+        text-align: center;
+      }
+      .plans {
+        padding-top: 100px;
+      }
+      /* .plans.box::hover{
+        transition: all 0.3s ease 0s;
+        background-color: #8490ff;
+        color: #fff;
+      } */
+      .top_part h4 {
+        font-size: 25px;
+      }
+      .bottom_part h1 {
+        font-size: 45px;
+      }
+      .blogimage {
+        height: 200px;
+        width: 400px;
+        text-align: center;
+      }
+      .blogs {
+        display: flex;
+        justify-content: space-between;
+      }
+      .blog1 {
+        padding-left: 100px;
+      }
+      .blog1 p {
+        font-size: 15px;
+      }
+      .blogtext {
+        text-align: center;
+        padding-bottom: 70px;
+      }
+      .blogtext h1 {
+        font-size: 40px;
+      }
+      .blogtext p {
+        font-size: 20px;
+      }
+      .blog1 h4 {
+        font-size: 20px;
+      }
+      .blog1 p {
+        font-size: 20px;
+      }
+      .blog1 h4:hover {
+        color: rgb(90, 151, 226);
+        cursor: pointer;
+      }
+      .section9 {
+        height: 700px;
+      }
+
+      .section10 {
+        height: 250px;
+        background: -webkit-linear-gradient(#000000 10%, #808080 90%);
+      }
+      .brands {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+      .brands img {
+        height: 90px;
+        padding-top: 70px;
+      }
+
+      .about {
+        display: flex;
+        justify-content: space-around;
+        background-color: rgb(8, 10, 27);
+        height: 400px;
+      }
+      .form {
+        display: flex;
+      }
+      .icons {
+        height: 19px;
+      }
+      .socialLogos {
+        display: flex;
+        justify-content: space-around;
+      }
+      .about h4 {
+        font-size: 30px;
+        color: #f9f9ff;
+      }
+      .about p {
+        font-size: 17px;
+        color: #f9f9ff;
+      }
+      .newsletter input {
+        height: 35px;
+        width: 450px;
+      }
+      .button button {
+        height: 41px;
+        width: 35px;
+        background-color: #5a97e2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <img class="logo" src="assets/logo.png.webp" />
+      <ul class="navcontent">
+        <li>Home</li>
+        <li>Projects</li>
+        <li>About</li>
+        <li style="padding-right: 70px">Contact</li>
+      </ul>
+    </div>
+    <section class="section1">
+      <div class="container">
+        <img class="avatar" src="assets/astro.png" />
+        <h2>Hi, my name is</h2>
+        <h1>GOPIKA RAVINDRAN</h1>
+        <p>A student,eager to create stunning and functional websites!</p>
+        <a href="https://google.com">
+          <button class="btn">DISCOVER NOW</button>
+        </a>
+      </div>
+    </section>
+    <section class="section2">
+      <div class="container2">
+        <img
+          style="height: 800px"
+          src="assets/vecteezy_astronaut-3d-rendering-icon-illustration_28206385.png"
+          alt=""
+        />
+        <div class="content">
+          <h3>About Me</h3>
+          <h1>Personal Details</h1>
+          <p class="word">
+            Here, I focus on a range of items and features that we use in life
+            without giving them a second thought. such as Coca Cola. Dolor sit
+            amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+            nostrud exercitation ullamco.
+          </p>
+          <a href="">
+            <button class="btn2">VIEW FULL DETAILS</button>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="section3">
+      <div class="services">
+        <h1>My Offered Services</h1>
+        <p>
+          At about this time of year, some months after New Year’s resolutions
+          have been made and kept, or made and neglected.
+        </p>
+      </div>
+    </section>
+    <section class="section4">
+      <div class="maincontainer">
+        <div class="container3">
+          <div style="text-align: center" class="webDesign">
+            <div>
+              <img
+                style="width: 70px"
+                src="assets/pie-chart-59-48.png"
+                alt=""
+              />
+            </div>
+            <h3 class="heading">Web Design</h3>
+            <p class="paragraph">
+              It is not because things are difficult that we do not dare; it is
+              because we do not dare that they are difficult.
+            </p>
+          </div>
+
+          <div style="text-align: center" class="webDevelopment">
+            <div>
+              <img style="width: 70px" src="assets/webdev.png" alt="" />
+            </div>
+            <h3 class="heading">Web Development</h3>
+            <p class="paragraph">
+              If you are an entrepreneur, you know that your success cannot
+              depend on the opinions of others. Like the wind, opinions.
+            </p>
+          </div>
+
+          <div style="text-align: center" class="Photography">
+            <div>
+              <img style="width: 70px" src="assets/camera.png" alt="" />
+            </div>
+            <h3 class="heading">Photography</h3>
+            <p class="paragraph">
+              Do you want to be even more successful? Learn to love learning and
+              growth. The more effort you put into improving your skills.
+            </p>
+          </div>
+        </div>
+
+        <div class="container4">
+          <div style="text-align: center" class="ClippingPath">
+            <div>
+              <img style="width: 70px" src="assets/photo.png" alt="" />
+            </div>
+            <h3 class="heading">Clipping Path</h3>
+            <p class="paragraph">
+              Hypnosis quit smoking methods maintain caused quite a stir in the
+              medical world over the last two decades. There is a lot of
+              argument.
+            </p>
+          </div>
+
+          <div style="text-align: center" class="Appsinterface">
+            <div>
+              <img style="width: 70px" src="assets/apps.png" alt="" />
+            </div>
+            <h3 class="heading">Apps Interface</h3>
+            <p class="paragraph">
+              Do you sometimes have the feeling that you’re running into the
+              same obstacles over and over again? Many of my conflicts.
+            </p>
+          </div>
+
+          <div style="text-align: center" class="GraphicDesign">
+            <div>
+              <img style="width: 70px" src="assets/rocket.png" alt="" />
+            </div>
+            <h3 class="heading">Graphic Design</h3>
+            <p class="paragraph">
+              You’ve heard the expression, “Just believe it and it will come.”
+              Well, technically, that is true, however, ‘believing’ is not just
+              thinking that.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section5">
+      <div class="container5">
+        <div class="rows">
+          <div class="row1">
+            <h1 class="number">2536</h1>
+            <p>Projects Completed</p>
+          </div>
+
+          <div class="row2">
+            <h1 class="number">6782</h1>
+            <p>Happy Clients</p>
+          </div>
+
+          <div class="row3">
+            <h1 class="number">2239</h1>
+            <p>Cups of Coffee</p>
+          </div>
+
+          <div class="row4">
+            <h1 class="number">434</h1>
+            <p>Real Professionals</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section6">
+      <div class="container6">
+        <div class="latestProjects">
+          <h1>Our Latest Featured Projects</h1>
+          <p style="margin-top: -14px">
+            Who are in extremely love with eco friendly system.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section7">
+      <div class="menu">
+        <ul class="filters">
+          <li class="filterlist">ALL</li>
+          <li class="filterlist">VECTOR</li>
+          <li class="filterlist">RASTER</li>
+          <li class="filterlist">UI/UX</li>
+          <li class="filterlist">PRINTING</li>
+        </ul>
+      </div>
+      <div style="height: 1400px" class="filtercontents">
+        <div class="grid">
+          <div class="vector1">
+            <img class="gridimage" src="assets/img1.jpg" alt="" />
+            <h2 class="desc">2D Vinyl Design</h2>
+            <p class="descp">vector</p>
+          </div>
+
+          <div class="vector2">
+            <img class="gridimage" src="assets/img2.jpg" alt="" />
+            <h2 class="desc">2D Vinyl Design</h2>
+            <p class="descp">vector</p>
+          </div>
+
+          <div class="agency">
+            <img class="gridimage" src="assets/img3.jpg" alt="" />
+            <h2 class="desc">Creative Poster Design</h2>
+            <p class="descp">agency</p>
+          </div>
+        </div>
+        <div class="grid2">
+          <div class="portal">
+            <img class="gridimage" src="assets/img4.jpg" alt="" />
+            <h2 class="desc">Embedded Logo Design</h2>
+            <p class="descp">portal</p>
+          </div>
+
+          <div class="vector3">
+            <img class="gridimage" src="assets/img5.jpg" alt="" />
+            <h2 class="desc">3D Helmet Design</h2>
+            <p class="descp">vector</p>
+          </div>
+
+          <div class="raster">
+            <img class="gridimage" src="assets/img6.jpg" alt="" />
+            <h2 class="desc">2D Vinyl Design</h2>
+            <p class="descp">raster</p>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="feedback"></div> -->
+    </section>
+    <section style="height: 1000px" class="section8">
+      <div class="chooseplan">
+        <div style="text-align: center; font-size: 22px" class="title">
+          <h1>Choose Your Plan</h1>
+          <p>
+            When someone does something that they know that they shouldn't do,
+            did they?
+          </p>
+        </div>
+      </div>
+
+      <div class="plans">
+        <div style="text-align: center" class="box">
+          <div class="top_part">
+            <h1 class="packageno">01</h1>
+            <h4>Economy</h4>
+            <p>For the individuals</p>
+          </div>
+          <div class="packagelist">
+            <ul>
+              <li>Secure Online Transfer</li>
+              <li>Unlimited Styles for interface</li>
+              <li>Reliable Customer Service</li>
+            </ul>
+          </div>
+          <div class="bottom_part">
+            <h1>199$</h1>
+          </div>
+        </div>
+
+        <div style="text-align: center" class="box">
+          <div class="top_part">
+            <h1 class="packageno">02</h1>
+            <h4>Business</h4>
+            <p>For the individuals</p>
+          </div>
+          <div class="packagelist">
+            <ul>
+              <li>Secure Online Transfer</li>
+              <li>Unlimited Styles for interface</li>
+              <li>Reliable Customer Service</li>
+            </ul>
+          </div>
+          <div class="bottom_part">
+            <h1>299$</h1>
+          </div>
+        </div>
+
+        <div style="text-align: center" class="box">
+          <div class="top_part">
+            <h1 class="packageno">03</h1>
+            <h4>Premium</h4>
+            <p>For the individuals</p>
+          </div>
+          <div class="packagelist">
+            <ul>
+              <li>Secure Online Transfer</li>
+              <li>Unlimited Styles for interface</li>
+              <li>Reliable Customer Service</li>
+            </ul>
+          </div>
+          <div class="bottom_part">
+            <h1>399$</h1>
+          </div>
+        </div>
+
+        <div style="text-align: center" class="box">
+          <div class="top_part">
+            <h1 class="packageno">04</h1>
+            <h4>Exclusive</h4>
+            <p>For the individuals</p>
+          </div>
+          <div class="packagelist">
+            <ul>
+              <li>Secure Online Transfer</li>
+              <li>Unlimited Styles for interface</li>
+              <li>Reliable Customer Service</li>
+            </ul>
+          </div>
+          <div class="bottom_part">
+            <h1>499$</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section9">
+      <div class="blogcontainer">
+        <div class="blogtext">
+          <h1>Latest posts from our blogs</h1>
+          <p>
+            You may be a skillful, effective employer but if you dont't trust
+            your personnel and the opposite then the chances of improving and
+            expanding business
+          </p>
+        </div>
+      </div>
+      <div class="blogs">
+        <div class="blog1">
+          <img src="assets/blog1img.jpg" alt="" class="blogimage" />
+          <h4>BREAK THROUGH SELF DOUBT AND FEAR</h4>
+          <p>
+            Dream interpretation has many forms; it can be done for the sake of
+            fun,hobby or can be taken up as a serious career
+          </p>
+        </div>
+
+        <div style="margin-left: 36px" class="blog1">
+          <img src="assets/blog2img.jpg" alt="" class="blogimage" />
+          <h4>PORTABLE FASHION FOR YOUNG WOMEN</h4>
+          <p>
+            You may be a skillful, effective employer but if you dont't trust
+            your personnel and the opposite then the chances of improving and
+            expanding business
+          </p>
+        </div>
+
+        <div style="padding-left: 20px" class="blog1">
+          <img src="assets/blog3img.jpg" alt="" class="blogimage" />
+          <h4>DO DREAMS SERVE AS AN PREMONITION</h4>
+          <p>
+            So many of us are demotivated to achieve anything. Such people are
+            not enthusiastic about anything. They don't want to work involved.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="section10">
+      <div class="brands">
+        <img src="assets/l1.png.webp" alt="" />
+
+        <img src="assets/l2.png.webp" alt="" />
+
+        <img src="assets/l3.png.webp" alt="" />
+
+        <img src="assets/l4.png.webp" alt="" />
+
+        <img src="assets/l5.png.webp" alt="" />
+      </div>
+    </section>
+
+    <div class="lastcontainer">
+      <div class="about">
+        <div class="footer_row1">
+          <h4>About me</h4>
+          <p>
+            We have tested a number of registry fix and clean utilities and
+            <br />
+            present our top 3 list on our site for your convenience.
+          </p>
+          <p>
+            Copyright ©2024 All rights reserved | This template is made with ♡
+            by <span style="color: #5a97e2">Colorlib</span>
+          </p>
+        </div>
+
+        <div style="padding-right: 80px" class="newsletter">
+          <h4>Newsletter</h4>
+          <p>Stay updated with our latest trends.</p>
+          <div class="emailform">
+            <form action="">
+              <div class="form">
+                <input
+                  type="text"
+                  name="Email"
+                  placeholder="Enter Email Address"
+                />
+                <div class="button">
+                  <button>➜</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div style="padding-right: 40px" class="socials">
+          <h4>Follow me</h4>
+          <p>Let us be social</p>
+          <div class="socialLogos">
+            <a href="#">
+              <img class="icons" src="assets/linkedin.webp" alt="" />
+            </a>
+            <a href="#">
+              <img class="icons" src="assets/twitter.webp" alt="" />
+            </a>
+            <a href="#">
+              <img class="icons" src="assets/instagram.webp" alt="" />
+            </a>
+            <a href="#">
+              <img class="icons" src="assets/discord.webp" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
